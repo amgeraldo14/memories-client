@@ -5,8 +5,10 @@ import thunk from 'redux-thunk'
 import reducers from './reducers/index.js'
 
 import App from './App'
+import './index.css'
 
 const store = createStore(reducers, compose(applyMiddleware(thunk)))
+console.log(store.getState(), 'GET STATE STORE')
 ReactDOM.render(
     <Provider store={store}>
       <App/>
